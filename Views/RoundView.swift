@@ -62,6 +62,16 @@ struct RoundView: View {
 
                 Spacer()
 
+                if viewModel.currentScanSheet?.imageURL != nil {
+                    Button("-") { viewModel.zoomOutCanvas() }
+                    Text("\(Int(viewModel.canvasScale * 100))%")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .frame(minWidth: 40)
+                    Button("+") { viewModel.zoomInCanvas() }
+                    Button("Reset Zoom") { viewModel.resetCanvasScale() }
+                }
+
                 Button("Add Region") { viewModel.addRegion() }
                     .disabled(viewModel.currentScanSheet == nil)
                 Button("Re-detect") { viewModel.reDetectCurrentSide() }

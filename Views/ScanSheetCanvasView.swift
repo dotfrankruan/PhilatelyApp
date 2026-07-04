@@ -19,6 +19,11 @@ struct ScanSheetCanvasView: NSViewRepresentable {
         let view = CanvasNSView()
         view.onUpdate = onUpdate
         view.onDelete = onDelete
+        view.onScaleChanged = { scale in
+            DispatchQueue.main.async {
+                viewModel.canvasScale = scale
+            }
+        }
         context.coordinator.view = view
         context.coordinator.viewModel = viewModel
         view.configure(with: viewModel)
@@ -28,6 +33,17 @@ struct ScanSheetCanvasView: NSViewRepresentable {
     func updateNSView(_ nsView: CanvasNSView, context: Context) {
         context.coordinator.viewModel = viewModel
         nsView.configure(with: viewModel)
+        if let command = viewModel.canvasZoomCommand {
+            switch command {
+            case .reset:
+                nsView.resetScale()
+            case .zoomIn:
+                nsView.zoomIn()
+            case .zoomOut:
+                nsView.zoomOut()
+            }
+            viewModel.canvasZoomCommand = nil
+        }
     }
 
     final class Coordinator: NSObject {
@@ -44,6 +60,12 @@ final class CanvasNSView: NSView {
     private var overlayView: NSView?
     private var regionViews: [UUID: RegionOverlayView] = [:]
     fileprivate var imagePixelSize: CGSize = .zero
+    private var scale: CGFloat = 1.0
+    private let minScale: CGFloat = 0.1
+    private let maxScale: CGFloat = 5.0
+    var onScaleChanged: ((CGFloat) -> Void)?
+
+    var currentScale: CGFloat { scale }
 
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -57,13 +79,13 @@ final class CanvasNSView: NSView {
 
     private func setup() {
         let imageView = NSImageView(frame: bounds)
-        imageView.imageScaling = .scaleProportionallyUpOrDown
-        imageView.autoresizingMask = [.width, .height]
+        imageView.imageScaling = .scaleAxesIndependently
+        imageView.autoresizingMask = []
         addSubview(imageView)
         self.imageView = imageView
 
         let overlayView = NSView(frame: bounds)
-        overlayView.autoresizingMask = [.width, .height]
+        overlayView.autoresizingMask = []
         overlayView.wantsLayer = true
         addSubview(overlayView)
         self.overlayView = overlayView
@@ -81,6 +103,8 @@ final class CanvasNSView: NSView {
         guard let url else {
             imageView?.image = nil
             imagePixelSize = .zero
+            scale = 1.0
+            applyScale()
             return
         }
         let image = NSImage(contentsOf: url)
@@ -90,12 +114,69 @@ final class CanvasNSView: NSView {
         } else {
             imagePixelSize = image?.size ?? .zero
         }
+        scale = initialFitScale()
+        applyScale()
+    }
+
+    private func initialFitScale() -> CGFloat {
+        guard imagePixelSize.width > 0, imagePixelSize.height > 0 else { return 1.0 }
+        let viewSize = bounds.size
+        guard viewSize.width > 0, viewSize.height > 0 else { return 1.0 }
+        let scaleX = viewSize.width / imagePixelSize.width
+        let scaleY = viewSize.height / imagePixelSize.height
+        return min(scaleX, scaleY)
+    }
+
+    private func applyScale() {
+        guard let imageView, let overlayView, imagePixelSize.width > 0, imagePixelSize.height > 0 else { return }
+        let viewSize = bounds.size
+        if viewSize.width <= 0 || viewSize.height <= 0 {
+            return
+        }
+        if scale > maxScale || scale < minScale {
+            scale = initialFitScale()
+        }
+        let scaledSize = CGSize(width: imagePixelSize.width * scale, height: imagePixelSize.height * scale)
+        let x = max(0, (viewSize.width - scaledSize.width) / 2)
+        let y = max(0, (viewSize.height - scaledSize.height) / 2)
+        let newFrame = CGRect(origin: CGPoint(x: x, y: y), size: scaledSize)
+        imageView.frame = newFrame
+        overlayView.frame = newFrame
         refreshOverlays()
+        onScaleChanged?(scale)
+    }
+
+    func setScale(_ newScale: CGFloat) {
+        scale = max(minScale, min(maxScale, newScale))
+        applyScale()
+    }
+
+    func zoomIn() {
+        setScale(scale * 1.2)
+    }
+
+    func zoomOut() {
+        setScale(scale / 1.2)
+    }
+
+    func resetScale() {
+        scale = initialFitScale()
+        applyScale()
+    }
+
+    override func scrollWheel(with event: NSEvent) {
+        if event.modifierFlags.contains(.command) || event.modifierFlags.contains(.control) {
+            let delta = event.scrollingDeltaY
+            let factor = delta > 0 ? 1.1 : (delta < 0 ? 0.9 : 1.0)
+            setScale(scale * factor)
+            return
+        }
+        super.scrollWheel(with: event)
     }
 
     override func resizeSubviews(withOldSize oldSize: NSSize) {
         super.resizeSubviews(withOldSize: oldSize)
-        refreshOverlays()
+        applyScale()
     }
 
     private func refreshOverlays(with regions: [Region]? = nil) {
@@ -109,7 +190,7 @@ final class CanvasNSView: NSView {
             regionViews.removeValue(forKey: id)
         }
 
-        let imageBounds = imageView.imageBounds
+        let imageBounds = imageView.frame
         guard imageBounds.width > 0, imageBounds.height > 0, imagePixelSize.width > 0, imagePixelSize.height > 0 else { return }
 
         let scaleX = imageBounds.width / imagePixelSize.width
@@ -142,7 +223,7 @@ final class CanvasNSView: NSView {
 
     fileprivate func imageBoundsToPixelRect(_ frame: CGRect) -> CGRect {
         guard let imageView else { return frame }
-        let imageBounds = imageView.imageBounds
+        let imageBounds = imageView.frame
         let scaleX = imagePixelSize.width / imageBounds.width
         let scaleY = imagePixelSize.height / imageBounds.height
         let x = (frame.minX - imageBounds.minX) * scaleX
@@ -155,27 +236,6 @@ final class CanvasNSView: NSView {
             width: w,
             height: h
         )
-    }
-}
-
-private extension NSImageView {
-    var imageBounds: CGRect {
-        guard let image else { return bounds }
-        let imageSize = image.size
-        let viewSize = bounds.size
-        let aspect = imageSize.width / imageSize.height
-        let viewAspect = viewSize.width / viewSize.height
-        let rect: CGRect
-        if aspect > viewAspect {
-            let width = viewSize.width
-            let height = width / aspect
-            rect = CGRect(x: 0, y: (viewSize.height - height) / 2, width: width, height: height)
-        } else {
-            let height = viewSize.height
-            let width = height * aspect
-            rect = CGRect(x: (viewSize.width - width) / 2, y: 0, width: width, height: height)
-        }
-        return rect
     }
 }
 
@@ -302,7 +362,7 @@ private final class RegionOverlayView: NSView {
             activeHandle = .none
             return
         }
-        let imageBounds = canvas.imageView?.imageBounds ?? canvas.bounds
+        let imageBounds = canvas.imageView?.frame ?? canvas.bounds
         var newFrame = self.frame
         newFrame.origin.x = max(imageBounds.minX, min(newFrame.minX, imageBounds.maxX - newFrame.width))
         newFrame.origin.y = max(imageBounds.minY, min(newFrame.minY, imageBounds.maxY - newFrame.height))

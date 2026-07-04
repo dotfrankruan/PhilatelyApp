@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D40473C132774817916CE5D7 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299722FF8D4E1007CF30B /* Region.swift */; };
+		404D97B809B74BDDAB7A84AC /* ScanSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299732FF8D4E4007CF30B /* ScanSheet.swift */; };
+		3997A1A1BC9D4C939F2C4605 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299742FF8D4E8007CF30B /* Asset.swift */; };
+		3EA8ED17BE0F4FB680AF57B4 /* PhilatelyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299752FF8D4ED007CF30B /* PhilatelyItem.swift */; };
+		21E591F983D34CD9B7920C50 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299762FF8D4F0007CF30B /* Round.swift */; };
+		5D20F53F792F4BEBB7BD20A9 /* PhilatelyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299772FF8D4F9007CF30B /* PhilatelyError.swift */; };
+		28983E00DF79485992E88231 /* UUIDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299782FF8D525007CF30B /* UUIDGenerator.swift */; };
+		5E31348B0B2D40FEA058576B /* FilePickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299792FF8D529007CF30B /* FilePickerService.swift */; };
+		B8DE7DA0E9664F97919BED4A /* MetadataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997A2FF8D52A007CF30B /* MetadataWriter.swift */; };
+		47BE15589FA74BA9A5C669D5 /* ExifToolMetadataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997B2FF8D532007CF30B /* ExifToolMetadataWriter.swift */; };
+		88A58131D44144E7970C2D94 /* RecentKeywordsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997C2FF8D537007CF30B /* RecentKeywordsStore.swift */; };
+		E28E2315F9D346BBB8CAC6B7 /* PairingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997D2FF8D53B007CF30B /* PairingService.swift */; };
+		7920A86EAEFD44578D6D0992 /* ImageCropService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997E2FF8D576007CF30B /* ImageCropService.swift */; };
+		433B75865750471B8D74A8D6 /* RegionDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997F2FF8D580007CF30B /* RegionDetectionService.swift */; };
+		6F32E621738147CA8209BB4D /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299802FF8D5C4007CF30B /* ExportService.swift */; };
+		B8202008BF95440A963B7CAD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299812FF8D5C9007CF30B /* Extensions.swift */; };
+		842A45C96D414F28BD2A204F /* FileHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299822FF8D5CB007CF30B /* FileHelpers.swift */; };
+		DA6E0767DAC04A0297BDD1FE /* RoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299832FF8D60D007CF30B /* RoundViewModel.swift */; };
+		B9E4565AAEA844348F3F4325 /* ItemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299842FF8D616007CF30B /* ItemDetailViewModel.swift */; };
+		CD9D03D3B66F46D6B1245722 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299892FF8D7ED007CF30B /* RoundView.swift */; };
+		6F6B345D283844FBA021205C /* ScanSheetCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299862FF8D7BE007CF30B /* ScanSheetCanvasView.swift */; };
+		F9A5E976C91F49BA8F550BC1 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299872FF8D7C5007CF30B /* ItemListView.swift */; };
+		932864D407EF4D2B8B42CCD3 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299882FF8D7DC007CF30B /* ItemDetailView.swift */; };
+		425AC0E5312741E6B6BAAF85 /* KeywordEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299852FF8D79D007CF30B /* KeywordEditorView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B62995F2FF8D0CB007CF30B /* PhilatelyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhilatelyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B6299722FF8D4E1007CF30B /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		2B6299732FF8D4E4007CF30B /* ScanSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanSheet.swift; sourceTree = "<group>"; };
+		2B6299742FF8D4E8007CF30B /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		2B6299752FF8D4ED007CF30B /* PhilatelyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhilatelyItem.swift; sourceTree = "<group>"; };
+		2B6299762FF8D4F0007CF30B /* Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
+		2B6299772FF8D4F9007CF30B /* PhilatelyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhilatelyError.swift; sourceTree = "<group>"; };
+		2B6299782FF8D525007CF30B /* UUIDGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDGenerator.swift; sourceTree = "<group>"; };
+		2B6299792FF8D529007CF30B /* FilePickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePickerService.swift; sourceTree = "<group>"; };
+		2B62997A2FF8D52A007CF30B /* MetadataWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataWriter.swift; sourceTree = "<group>"; };
+		2B62997B2FF8D532007CF30B /* ExifToolMetadataWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExifToolMetadataWriter.swift; sourceTree = "<group>"; };
+		2B62997C2FF8D537007CF30B /* RecentKeywordsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentKeywordsStore.swift; sourceTree = "<group>"; };
+		2B62997D2FF8D53B007CF30B /* PairingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingService.swift; sourceTree = "<group>"; };
+		2B62997E2FF8D576007CF30B /* ImageCropService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCropService.swift; sourceTree = "<group>"; };
+		2B62997F2FF8D580007CF30B /* RegionDetectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionDetectionService.swift; sourceTree = "<group>"; };
+		2B6299802FF8D5C4007CF30B /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
+		2B6299812FF8D5C9007CF30B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2B6299822FF8D5CB007CF30B /* FileHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelpers.swift; sourceTree = "<group>"; };
+		2B6299832FF8D60D007CF30B /* RoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViewModel.swift; sourceTree = "<group>"; };
+		2B6299842FF8D616007CF30B /* ItemDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewModel.swift; sourceTree = "<group>"; };
+		2B6299852FF8D79D007CF30B /* KeywordEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordEditorView.swift; sourceTree = "<group>"; };
+		2B6299862FF8D7BE007CF30B /* ScanSheetCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanSheetCanvasView.swift; sourceTree = "<group>"; };
+		2B6299872FF8D7C5007CF30B /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		2B6299882FF8D7DC007CF30B /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
+		2B6299892FF8D7ED007CF30B /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		2B6299612FF8D0CB007CF30B /* PhilatelyApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PhilatelyApp;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B62995C2FF8D0CB007CF30B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B6299562FF8D0CB007CF30B = {
+			isa = PBXGroup;
+			children = (
+				2B6299612FF8D0CB007CF30B /* PhilatelyApp */,
+				2B6299602FF8D0CB007CF30B /* Products */,
+				2B62996D2FF8D4D6007CF30B /* Models */,
+				2B62996E2FF8D4D6007CF30B /* Views */,
+				2B62996F2FF8D4D6007CF30B /* ViewModels */,
+				2B6299702FF8D4D7007CF30B /* Services */,
+				2B6299712FF8D4D7007CF30B /* Utilities */,
+			);
+			sourceTree = "<group>";
+		};
+		2B6299602FF8D0CB007CF30B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B62995F2FF8D0CB007CF30B /* PhilatelyApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B62996D2FF8D4D6007CF30B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B6299722FF8D4E1007CF30B /* Region.swift */,
+				2B6299732FF8D4E4007CF30B /* ScanSheet.swift */,
+				2B6299742FF8D4E8007CF30B /* Asset.swift */,
+				2B6299752FF8D4ED007CF30B /* PhilatelyItem.swift */,
+				2B6299762FF8D4F0007CF30B /* Round.swift */,
+				2B6299772FF8D4F9007CF30B /* PhilatelyError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2B62996E2FF8D4D6007CF30B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B6299852FF8D79D007CF30B /* KeywordEditorView.swift */,
+				2B6299862FF8D7BE007CF30B /* ScanSheetCanvasView.swift */,
+				2B6299872FF8D7C5007CF30B /* ItemListView.swift */,
+				2B6299882FF8D7DC007CF30B /* ItemDetailView.swift */,
+				2B6299892FF8D7ED007CF30B /* RoundView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2B62996F2FF8D4D6007CF30B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2B6299832FF8D60D007CF30B /* RoundViewModel.swift */,
+				2B6299842FF8D616007CF30B /* ItemDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2B6299702FF8D4D7007CF30B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2B6299782FF8D525007CF30B /* UUIDGenerator.swift */,
+				2B6299792FF8D529007CF30B /* FilePickerService.swift */,
+				2B62997A2FF8D52A007CF30B /* MetadataWriter.swift */,
+				2B62997B2FF8D532007CF30B /* ExifToolMetadataWriter.swift */,
+				2B62997C2FF8D537007CF30B /* RecentKeywordsStore.swift */,
+				2B62997D2FF8D53B007CF30B /* PairingService.swift */,
+				2B62997E2FF8D576007CF30B /* ImageCropService.swift */,
+				2B62997F2FF8D580007CF30B /* RegionDetectionService.swift */,
+				2B6299802FF8D5C4007CF30B /* ExportService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2B6299712FF8D4D7007CF30B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2B6299812FF8D5C9007CF30B /* Extensions.swift */,
+				2B6299822FF8D5CB007CF30B /* FileHelpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B62995E2FF8D0CB007CF30B /* PhilatelyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B62996A2FF8D0CC007CF30B /* Build configuration list for PBXNativeTarget "PhilatelyApp" */;
+			buildPhases = (
+				2B62995B2FF8D0CB007CF30B /* Sources */,
+				2B62995C2FF8D0CB007CF30B /* Frameworks */,
+				2B62995D2FF8D0CB007CF30B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2B6299612FF8D0CB007CF30B /* PhilatelyApp */,
+			);
+			name = PhilatelyApp;
+			packageProductDependencies = (
+			);
+			productName = PhilatelyApp;
+			productReference = 2B62995F2FF8D0CB007CF30B /* PhilatelyApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B6299572FF8D0CB007CF30B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					2B62995E2FF8D0CB007CF30B = {
+						CreatedOnToolsVersion = 26.6;
+					};
+				};
+			};
+			buildConfigurationList = 2B62995A2FF8D0CB007CF30B /* Build configuration list for PBXProject "PhilatelyApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B6299562FF8D0CB007CF30B;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2B6299602FF8D0CB007CF30B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B62995E2FF8D0CB007CF30B /* PhilatelyApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B62995D2FF8D0CB007CF30B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B62995B2FF8D0CB007CF30B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D40473C132774817916CE5D7 /* Region.swift in Sources */,
+				404D97B809B74BDDAB7A84AC /* ScanSheet.swift in Sources */,
+				3997A1A1BC9D4C939F2C4605 /* Asset.swift in Sources */,
+				3EA8ED17BE0F4FB680AF57B4 /* PhilatelyItem.swift in Sources */,
+				21E591F983D34CD9B7920C50 /* Round.swift in Sources */,
+				5D20F53F792F4BEBB7BD20A9 /* PhilatelyError.swift in Sources */,
+				28983E00DF79485992E88231 /* UUIDGenerator.swift in Sources */,
+				5E31348B0B2D40FEA058576B /* FilePickerService.swift in Sources */,
+				B8DE7DA0E9664F97919BED4A /* MetadataWriter.swift in Sources */,
+				47BE15589FA74BA9A5C669D5 /* ExifToolMetadataWriter.swift in Sources */,
+				88A58131D44144E7970C2D94 /* RecentKeywordsStore.swift in Sources */,
+				E28E2315F9D346BBB8CAC6B7 /* PairingService.swift in Sources */,
+				7920A86EAEFD44578D6D0992 /* ImageCropService.swift in Sources */,
+				433B75865750471B8D74A8D6 /* RegionDetectionService.swift in Sources */,
+				6F32E621738147CA8209BB4D /* ExportService.swift in Sources */,
+				B8202008BF95440A963B7CAD /* Extensions.swift in Sources */,
+				842A45C96D414F28BD2A204F /* FileHelpers.swift in Sources */,
+				DA6E0767DAC04A0297BDD1FE /* RoundViewModel.swift in Sources */,
+				B9E4565AAEA844348F3F4325 /* ItemDetailViewModel.swift in Sources */,
+				CD9D03D3B66F46D6B1245722 /* RoundView.swift in Sources */,
+				6F6B345D283844FBA021205C /* ScanSheetCanvasView.swift in Sources */,
+				F9A5E976C91F49BA8F550BC1 /* ItemListView.swift in Sources */,
+				932864D407EF4D2B8B42CCD3 /* ItemDetailView.swift in Sources */,
+				425AC0E5312741E6B6BAAF85 /* KeywordEditorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2B6299682FF8D0CC007CF30B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 4JK3564ZCD;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B6299692FF8D0CC007CF30B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4JK3564ZCD;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		2B62996B2FF8D0CC007CF30B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4JK3564ZCD;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.frandustry.PhilatelyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2B62996C2FF8D0CC007CF30B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4JK3564ZCD;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.frandustry.PhilatelyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B62995A2FF8D0CB007CF30B /* Build configuration list for PBXProject "PhilatelyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B6299682FF8D0CC007CF30B /* Debug */,
+				2B6299692FF8D0CC007CF30B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B62996A2FF8D0CC007CF30B /* Build configuration list for PBXNativeTarget "PhilatelyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B62996B2FF8D0CC007CF30B /* Debug */,
+				2B62996C2FF8D0CC007CF30B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B6299572FF8D0CB007CF30B /* Project object */;
+}

@@ -7,30 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D40473C132774817916CE5D7 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299722FF8D4E1007CF30B /* Region.swift */; };
-		404D97B809B74BDDAB7A84AC /* ScanSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299732FF8D4E4007CF30B /* ScanSheet.swift */; };
+		21E591F983D34CD9B7920C50 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299762FF8D4F0007CF30B /* Round.swift */; };
+		28983E00DF79485992E88231 /* UUIDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299782FF8D525007CF30B /* UUIDGenerator.swift */; };
 		3997A1A1BC9D4C939F2C4605 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299742FF8D4E8007CF30B /* Asset.swift */; };
 		3EA8ED17BE0F4FB680AF57B4 /* PhilatelyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299752FF8D4ED007CF30B /* PhilatelyItem.swift */; };
-		21E591F983D34CD9B7920C50 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299762FF8D4F0007CF30B /* Round.swift */; };
-		5D20F53F792F4BEBB7BD20A9 /* PhilatelyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299772FF8D4F9007CF30B /* PhilatelyError.swift */; };
-		28983E00DF79485992E88231 /* UUIDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299782FF8D525007CF30B /* UUIDGenerator.swift */; };
-		5E31348B0B2D40FEA058576B /* FilePickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299792FF8D529007CF30B /* FilePickerService.swift */; };
-		B8DE7DA0E9664F97919BED4A /* MetadataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997A2FF8D52A007CF30B /* MetadataWriter.swift */; };
-		47BE15589FA74BA9A5C669D5 /* ExifToolMetadataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997B2FF8D532007CF30B /* ExifToolMetadataWriter.swift */; };
-		88A58131D44144E7970C2D94 /* RecentKeywordsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997C2FF8D537007CF30B /* RecentKeywordsStore.swift */; };
-		E28E2315F9D346BBB8CAC6B7 /* PairingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997D2FF8D53B007CF30B /* PairingService.swift */; };
-		7920A86EAEFD44578D6D0992 /* ImageCropService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997E2FF8D576007CF30B /* ImageCropService.swift */; };
+		404D97B809B74BDDAB7A84AC /* ScanSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299732FF8D4E4007CF30B /* ScanSheet.swift */; };
+		425AC0E5312741E6B6BAAF85 /* KeywordEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299852FF8D79D007CF30B /* KeywordEditorView.swift */; };
 		433B75865750471B8D74A8D6 /* RegionDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997F2FF8D580007CF30B /* RegionDetectionService.swift */; };
+		47BE15589FA74BA9A5C669D5 /* ExifToolMetadataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997B2FF8D532007CF30B /* ExifToolMetadataWriter.swift */; };
+		5D20F53F792F4BEBB7BD20A9 /* PhilatelyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299772FF8D4F9007CF30B /* PhilatelyError.swift */; };
+		5E31348B0B2D40FEA058576B /* FilePickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299792FF8D529007CF30B /* FilePickerService.swift */; };
 		6F32E621738147CA8209BB4D /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299802FF8D5C4007CF30B /* ExportService.swift */; };
-		B8202008BF95440A963B7CAD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299812FF8D5C9007CF30B /* Extensions.swift */; };
+		6F6B345D283844FBA021205C /* ScanSheetCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299862FF8D7BE007CF30B /* ScanSheetCanvasView.swift */; };
+		7920A86EAEFD44578D6D0992 /* ImageCropService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997E2FF8D576007CF30B /* ImageCropService.swift */; };
 		842A45C96D414F28BD2A204F /* FileHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299822FF8D5CB007CF30B /* FileHelpers.swift */; };
-		DA6E0767DAC04A0297BDD1FE /* RoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299832FF8D60D007CF30B /* RoundViewModel.swift */; };
+		88A58131D44144E7970C2D94 /* RecentKeywordsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997C2FF8D537007CF30B /* RecentKeywordsStore.swift */; };
+		932864D407EF4D2B8B42CCD3 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299882FF8D7DC007CF30B /* ItemDetailView.swift */; };
+		B8202008BF95440A963B7CAD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299812FF8D5C9007CF30B /* Extensions.swift */; };
+		B8DE7DA0E9664F97919BED4A /* MetadataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997A2FF8D52A007CF30B /* MetadataWriter.swift */; };
 		B9E4565AAEA844348F3F4325 /* ItemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299842FF8D616007CF30B /* ItemDetailViewModel.swift */; };
 		CD9D03D3B66F46D6B1245722 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299892FF8D7ED007CF30B /* RoundView.swift */; };
-		6F6B345D283844FBA021205C /* ScanSheetCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299862FF8D7BE007CF30B /* ScanSheetCanvasView.swift */; };
+		D40473C132774817916CE5D7 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299722FF8D4E1007CF30B /* Region.swift */; };
+		DA6E0767DAC04A0297BDD1FE /* RoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299832FF8D60D007CF30B /* RoundViewModel.swift */; };
+		E28E2315F9D346BBB8CAC6B7 /* PairingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62997D2FF8D53B007CF30B /* PairingService.swift */; };
 		F9A5E976C91F49BA8F550BC1 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299872FF8D7C5007CF30B /* ItemListView.swift */; };
-		932864D407EF4D2B8B42CCD3 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299882FF8D7DC007CF30B /* ItemDetailView.swift */; };
-		425AC0E5312741E6B6BAAF85 /* KeywordEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6299852FF8D79D007CF30B /* KeywordEditorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -389,6 +389,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -398,6 +399,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -421,6 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -430,6 +433,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -15,12 +15,6 @@ final class RoundViewModel: ObservableObject {
     @Published var isDetecting = false
     @Published var errorMessage: String?
     @Published var showCompletionAlert = false
-    @Published var canvasScale: CGFloat = 1.0
-    @Published var canvasZoomCommand: CanvasZoomCommand?
-
-    enum CanvasZoomCommand {
-        case reset, zoomIn, zoomOut
-    }
 
     let recentStore: RecentKeywordsStore
     let exportService: ExportService
@@ -59,19 +53,6 @@ final class RoundViewModel: ObservableObject {
         selectedItem = nil
         errorMessage = nil
         showCompletionAlert = false
-
-    }
-
-    func resetCanvasScale() {
-        canvasZoomCommand = .reset
-    }
-
-    func zoomInCanvas() {
-        canvasZoomCommand = .zoomIn
-    }
-
-    func zoomOutCanvas() {
-        canvasZoomCommand = .zoomOut
     }
 
 

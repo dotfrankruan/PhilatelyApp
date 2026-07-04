@@ -74,8 +74,6 @@ struct RoundView: View {
 
                 Button("Add Region") { viewModel.addRegion() }
                     .disabled(viewModel.currentScanSheet == nil)
-                Button("Re-detect") { viewModel.reDetectCurrentSide() }
-                    .disabled(viewModel.isDetecting || viewModel.currentScanSheet == nil)
             }
             .padding()
             .background(Color.secondary.opacity(0.05))

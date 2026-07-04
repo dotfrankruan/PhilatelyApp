@@ -174,10 +174,7 @@ final class CanvasNSView: NSView {
         super.scrollWheel(with: event)
     }
 
-    override func resizeSubviews(withOldSize oldSize: NSSize) {
-        super.resizeSubviews(withOldSize: oldSize)
-        applyScale()
-    }
+
 
     private func refreshOverlays(with regions: [Region]? = nil) {
         guard let overlayView, let imageView else { return }
